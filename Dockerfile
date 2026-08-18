@@ -10,6 +10,8 @@ RUN useradd --create-home appuser
 
 COPY . . 
 
+RUN chown -R appuser:appuser /app
+
 USER appuser
 
 EXPOSE 8000
